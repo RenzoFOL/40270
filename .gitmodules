@@ -1,3 +1,6 @@
 [submodule "fei"]
 	path = fei
 	url = https://github.com/RenzoFOL/fei.git
+[submodule "eccomerce"]
+	path = eccomerce
+	url = https://github.com/RenzoFOL/eccomerce.git
