@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página 01</title>
+</head>
+<body>
+    <table id="demo">
+        
+    </table>
+
+    <script>
+        loadXMLDoc()
+
+
+        function loadXMLDoc() {
+          const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                const data = xhttp.responseText.split("\n"); // Divide el texto en líneas
+                
+                let table = "<tr><th>Nombre</th></tr>"; // Define la estructura de la tabla
+                
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].trim() !== "") { // Evita agregar líneas vacías
+                        table += "<tr><td>" + data[i] + "</td></tr>";
+                    }
+                }
+                
+                document.getElementById("demo").innerHTML = table;
+            }
+            xhttp.open("GET", "personas.txt", true);
+            xhttp.send();
+
+            }
+            myFunction(cd);
+        
+        function myFunction(cd) {
+          let table="<tr><th>Artist</th><th>Title</th></tr>";
+          for (let i = 0; i < cd.length; i++) {
+            table += "<tr><td>" +
+            cd[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            cd[i].getElementsByTagName("fecha")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+          }
+          document.getElementById("demo").innerHTML = table;
+        }
+    </script>
+</body>
+</html>

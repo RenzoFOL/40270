@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumnos [
+    <!ELEMENT alumnos (alumno*)>
+    <!ELEMENT alumno (nombre, fecha)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+]>
+<alumnos>
+    <alumno>
+        <nombre>Juan Pérez</nombre>
+        <fecha>sus1</fecha>
+    </alumno>
+    <alumno>
+        <nombre>María López</nombre>
+        <fecha>sus2</fecha>
+    </alumno>
+    <alumno>
+        <nombre>Carlos Hernández</nombre>
+        <fecha>sus3</fecha>
+    </alumno>
+</alumnos>
