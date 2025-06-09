@@ -7,3 +7,6 @@
 [submodule "poema"]
 	path = poema
 	url = https://github.com/RenzoFOL/poema.git
+[submodule "ordinario-ftw"]
+	path = ordinario-ftw
+	url = https://github.com/RenzoFOL/ordinario-ftw.git
